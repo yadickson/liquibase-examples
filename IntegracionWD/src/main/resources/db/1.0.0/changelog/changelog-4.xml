@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Creacion de claves foraneas -->
+
+    <changeSet id="1" author="yadickson.soto">
+        <ext:tagDatabase tag="1.0.0-4.1" />
+
+        <addForeignKeyConstraint
+            baseTableName="T_FORMULA_CUENTA"
+            baseColumnNames="ID_FORMULA"
+            constraintName="FK_ID_FORMULA_T_FORMULA_CUENTA"
+            referencedTableName="T_FORMULA"
+            referencedColumnNames="ID"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT" />
+            
+        <rollback>
+            <dropForeignKeyConstraint baseTableName="T_FORMULA_CUENTA" constraintName="FK_ID_FORMULA_T_FORMULA_CUENTA"/>
+        </rollback>
+    
+    </changeSet>
+
+</databaseChangeLog>

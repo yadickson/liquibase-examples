@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Creacion de secuencias -->
+        
+    <changeSet id="1" author="yadickson.soto">
+        <ext:tagDatabase tag="1.0.0-1.1" />
+
+        <createSequence sequenceName="SEQ_PERSONA_ID"
+                        minValue="1" maxValue="999999999999999999999999999" incrementBy="1"
+                        startValue="1" cacheSize="20" ordered="false" cycle="false" />
+        <rollback>
+            <dropSequence sequenceName="SEQ_PERSONA_ID" />
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+"ID","NOMBRE","TITULO","TIPO","ORDEN","VISUALIZACION","CATEGORIA","VIGENCIA"
+SEQ_CUENTA_ID.NEXTVAL,587,Facturas de Compra recibidas con retención total (contribuyentes retenidos),1,10,1,1,1
+SEQ_CUENTA_ID.NEXTVAL,502,Facturas Emitidas,1,4,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,513,Notas de Débito emitidas,1,7,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,510,Notas de Crédito emitidas,1,8,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,517,Facturas de Compra recibidas con retencion parcial (contribuyentes retenidos),1,9,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,501,Liquidaciones de Facturas,1,9,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,560,Importaciones,0,3,1,3,1
+SEQ_CUENTA_ID.NEXTVAL,562,Internas exentas o no gravadas,0,4,1,3,1
+SEQ_CUENTA_ID.NEXTVAL,520,Facturas recibidas del giro y Facturas de compra emitidas,0,2,1,4,1
+SEQ_CUENTA_ID.NEXTVAL,595,Facturas activo fijo,0,2,0,4,1
+SEQ_CUENTA_ID.NEXTVAL,532,Notas de Débito recibidas,0,5,1,4,1
+SEQ_CUENTA_ID.NEXTVAL,553,Formulario de pago de importaciones de activo fijo,0,7,1,5,1
+SEQ_CUENTA_ID.NEXTVAL,759,Comprobantes o Recibos de Pago generados en transacciones pagadas a través de medios electrónicos,1,6,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,201,Exportaciones,0,3,0,1,1
+SEQ_CUENTA_ID.NEXTVAL,528,Notas de Crédito recibidas,0,4,1,4,1
+SEQ_CUENTA_ID.NEXTVAL,142,Ventas y/o Servicios prestados Internos Externos o No Gravados,1,2,1,1,1
+SEQ_CUENTA_ID.NEXTVAL,521,Internas afectadas,0,2,1,3,1
+SEQ_CUENTA_ID.NEXTVAL,535,Formulario de pago de importaciones del giro,0,6,1,5,1
+SEQ_CUENTA_ID.NEXTVAL,514,IVA por documentos electrónicos recibidos,0,2,1,6,1
+SEQ_CUENTA_ID.NEXTVAL,20,Exportaciones,1,1,1,1,1
+SEQ_CUENTA_ID.NEXTVAL,732,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,720,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,709,N/A,1,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,525,Facturas activo fijo,0,3,1,4,1
+SEQ_CUENTA_ID.NEXTVAL,762,N/A,0,1,0,1,1
+SEQ_CUENTA_ID.NEXTVAL,111,Boletas,1,5,1,2,1
+SEQ_CUENTA_ID.NEXTVAL,129,Impuesto pagado,0,1,1,6,1
+SEQ_CUENTA_ID.NEXTVAL,144,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,108,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,112,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,154,N/A,0,1,0,1,0
+SEQ_CUENTA_ID.NEXTVAL,109,N/A,0,1,0,1,0
