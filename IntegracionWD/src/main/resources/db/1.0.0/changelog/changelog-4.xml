@@ -9,7 +9,7 @@
 
     <!-- Creacion de claves foraneas -->
 
-    <changeSet id="1" author="yadickson.soto">
+    <changeSet id="1" author="yadickson.soto" dbms="oracle">
         <ext:tagDatabase tag="1.0.0-4.1" />
 
         <addForeignKeyConstraint
@@ -20,6 +20,24 @@
             referencedColumnNames="ID"
             deferrable="true"
             initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT" />
+            
+        <rollback>
+            <dropForeignKeyConstraint baseTableName="T_FORMULA_CUENTA" constraintName="FK_ID_FORMULA_T_FORMULA_CUENTA"/>
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="1" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-4.1" />
+
+        <addForeignKeyConstraint
+            baseTableName="T_FORMULA_CUENTA"
+            baseColumnNames="ID_FORMULA"
+            constraintName="FK_ID_FORMULA_T_FORMULA_CUENTA"
+            referencedTableName="T_FORMULA"
+            referencedColumnNames="ID"
             onDelete="CASCADE"
             onUpdate="RESTRICT" />
             

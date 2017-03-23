@@ -33,8 +33,9 @@
     <dependencies>
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>sqljdbc</artifactId>
-            <version>1.2</version>        </dependency>
+            <artifactId>sqljdbc_6.0</artifactId>
+            <version>4.2</version>
+        </dependency>
     </dependencies>
 
     <build>

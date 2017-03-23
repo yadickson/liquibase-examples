@@ -9,7 +9,7 @@
 
     <!-- Creacion de tablas -->
 
-    <property name="varcharUnit" value="CHAR" dbms="oracle"/>
+    <property name="varcharUnit" value="CHAR" dbms="oracle,mssql"/>
     
     <changeSet id="1" author="yadickson.soto">
         <ext:tagDatabase tag="1.0.0-2.1" />
