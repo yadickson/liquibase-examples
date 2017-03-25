@@ -9,10 +9,10 @@
 
     <!-- Creacion de tablas -->
 
-    <changeSet id="1" author="yadickson.soto">
+    <changeSet id="1" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-1.1" />
         
-        <createTable tableName="Vehiculos" dbms="mssql">
+        <createTable tableName="Vehiculos" >
             <column name="Id" type="BIGINT" autoIncrement="true" >
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_vehiculos_id"/>
             </column>
