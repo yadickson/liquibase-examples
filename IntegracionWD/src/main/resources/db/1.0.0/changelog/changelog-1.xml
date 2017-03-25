@@ -145,6 +145,9 @@
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
             </column>
+            <column name="Codigo" type="NVARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
             <column name="FechaRegistro" type="DATE">
                 <constraints nullable="false"/>
             </column>
@@ -164,6 +167,9 @@
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogPersonasId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Codigo" type="NVARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
@@ -187,6 +193,9 @@
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
             </column>
+            <column name="Codigo" type="NVARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
             <column name="FechaRegistro" type="DATE">
                 <constraints nullable="false"/>
             </column>
@@ -206,6 +215,9 @@
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogConsultaTransitoId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Codigo" type="NVARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
