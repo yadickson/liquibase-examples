@@ -9,17 +9,107 @@
 
     <!-- Creacion de valores por defecto -->
 
-    <changeSet id="1" author="yadickson.soto">
-        <ext:tagDatabase tag="1.0.0-6.1" />
+    <changeSet id="1" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.1" />
 
         <addDefaultValue
-            columnDataType="NUMBER"
-            columnName="BORRADA"
-            defaultValue="0"
-            tableName="T_CUENTA" />
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="Vehiculos" />
                     
         <rollback>
-            <dropDefaultValue tableName="T_CUENTA" columnName="BORRADA" />
+            <dropDefaultValue tableName="Vehiculos" columnName="FechaRegistro" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="2" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.2" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="Personas" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="Personas" columnName="FechaRegistro" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="3" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.3" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaModificacion"
+            defaultValueDate="getdate()"
+            tableName="Parametros" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="Parametros" columnName="FechaModificacion" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="4" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.4" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="LogVehiculos" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="LogVehiculos" columnName="FechaRegistro" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="5" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.5" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="LogPersonas" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="LogPersonas" columnName="FechaRegistro" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="6" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.6" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="LogConsultaIdentificador" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="LogConsultaIdentificador" columnName="FechaRegistro" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="7" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.7" />
+
+        <addDefaultValue
+            columnDataType="DATE"
+            columnName="FechaRegistro"
+            defaultValueDate="getdate()"
+            tableName="LogConsultaTransito" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="LogConsultaTransito" columnName="FechaRegistro" />
         </rollback>
     
     </changeSet>
