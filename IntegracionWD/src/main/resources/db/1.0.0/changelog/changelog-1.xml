@@ -14,7 +14,7 @@
         
         <createTable tableName="Vehiculos" >
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_vehiculos_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyVehiculosId"/>
             </column>
             <column name="Patente" type="NCHAR(10)">
                 <constraints nullable="false"/>
@@ -62,7 +62,7 @@
         
         <createTable tableName="Personas">
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_personas_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyPersonasId"/>
             </column>
             <column name="Nombre" type="NVARCHAR(10)">
                 <constraints nullable="false"/>
@@ -116,7 +116,7 @@
         
         <createTable tableName="Parametros">
             <column name="Id" type="INT" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_parametros_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyParametrosId"/>
             </column>
             <column name="Nombre" type="NVARCHAR(10)">
                 <constraints nullable="false"/>
@@ -140,7 +140,7 @@
         
         <createTable tableName="LogVehiculos">
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_vehiculos_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogvehiculosId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
@@ -161,7 +161,7 @@
         
         <createTable tableName="LogPersonas">
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_personas_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogPersonasId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
@@ -182,7 +182,7 @@
         
         <createTable tableName="LogConsultaIdentificador">
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_consulta_identificador_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogConsultaIdentificadorId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
@@ -203,7 +203,7 @@
         
         <createTable tableName="LogConsultaTransito">
             <column name="Id" type="BIGINT" autoIncrement="true" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_consulta_transito_id"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyLogConsultaTransitoId"/>
             </column>
             <column name="Mensaje" type="NVARCHAR">
                 <constraints nullable="false"/>
