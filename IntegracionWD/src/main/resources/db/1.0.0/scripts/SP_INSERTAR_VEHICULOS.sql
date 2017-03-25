@@ -3,13 +3,13 @@ CREATE PROCEDURE [dbo].[SP_INSERTAR_VEHICULOS]
      @Marca [nvarchar](50),
      @Modelo [nvarchar](50),
      @Anio [nchar](10),
-     @TipoVehiculo nvarchar(50),
-     @Contrato nvarchar(50),
+     @TipoVehiculo [nvarchar](50),
+     @Contrato [nvarchar](50),
      @RazonSocial [nvarchar](50),
      @FechaExpiracion [nchar](10),
      @MotivoRechazo [nvarchar](4000),
-     @Resultado nvarchar (50) OUTPUT,
-     @Mensaje nvarchar(4000) OUTPUT
+     @Resultado [nvarchar](50) OUTPUT,
+     @Mensaje [nvarchar](4000) OUTPUT
 AS
 BEGIN TRY
 

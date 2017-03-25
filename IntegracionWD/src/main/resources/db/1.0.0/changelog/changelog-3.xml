@@ -31,4 +31,48 @@
     
     </changeSet>
 
+    <changeSet id="3" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-3.3" />
+
+        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_VEHICULOS" path="../scripts/SP_INSERTAR_LOG_VEHICULOS.sql" relativeToChangelogFile="true" />
+
+        <rollback>
+            <dropProcedure procedureName="SP_INSERTAR_LOG_VEHICULOS"/>
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="4" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-3.4" />
+
+        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_PERSONAS" path="../scripts/SP_INSERTAR_LOG_PERSONAS.sql" relativeToChangelogFile="true" />
+
+        <rollback>
+            <dropProcedure procedureName="SP_INSERTAR_LOG_PERSONAS"/>
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="5" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-3.5" />
+
+        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_CONSULTA_TRANSITO" path="../scripts/SP_INSERTAR_LOG_CONSULTA_TRANSITO.sql" relativeToChangelogFile="true" />
+
+        <rollback>
+            <dropProcedure procedureName="SP_INSERTAR_LOG_CONSULTA_TRANSITO"/>
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="6" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-3.6" />
+
+        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR" path="../scripts/SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR.sql" relativeToChangelogFile="true" />
+
+        <rollback>
+            <dropProcedure procedureName="SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR"/>
+        </rollback>
+    
+    </changeSet>
+
 </databaseChangeLog>
