@@ -114,4 +114,34 @@
     
     </changeSet>
 
+    <changeSet id="8" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.8" />
+
+        <addDefaultValue
+            columnDataType="STRING"
+            columnName="Estado"
+            defaultValue="0"
+            tableName="Vehiculos" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="Vehiculos" columnName="Estado" />
+        </rollback>
+    
+    </changeSet>
+
+    <changeSet id="9" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-2.9" />
+
+        <addDefaultValue
+            columnDataType="STRING"
+            columnName="Estado"
+            defaultValue="0"
+            tableName="Personas" />
+                    
+        <rollback>
+            <dropDefaultValue tableName="Personas" columnName="Estado" />
+        </rollback>
+    
+    </changeSet>
+
 </databaseChangeLog>
