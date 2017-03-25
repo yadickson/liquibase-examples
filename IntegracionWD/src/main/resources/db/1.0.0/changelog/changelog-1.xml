@@ -12,8 +12,8 @@
     <changeSet id="1" author="yadickson.soto">
         <ext:tagDatabase tag="1.0.0-1.1" />
         
-        <createTable tableName="Vehiculos">
-            <column name="ID" type="BIGINT" autoIncrement="true" >
+        <createTable tableName="Vehiculos" dbms="mssql">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_vehiculos_id"/>
             </column>
             <column name="Patente" type="NCHAR(10)">
@@ -53,6 +53,168 @@
 
         <rollback>
             <dropTable tableName="Vehiculos"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="2" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.2" />
+        
+        <createTable tableName="Personas">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_personas_id"/>
+            </column>
+            <column name="Nombre" type="NVARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Apellido" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RUT" type="NCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Tarjeta" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TipoPase" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Contrato" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RazonSocial" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaExpiracionTrabajador" type="NCHAR(8)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MotivoRechazoTrabajador" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaExpiracionLicencia" type="NCHAR(8)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MotivoRechazoLicencia" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Estado" type="NCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="Personas"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="3" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.3" />
+        
+        <createTable tableName="Parametros">
+            <column name="Id" type="INT" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_parametros_id"/>
+            </column>
+            <column name="Nombre" type="NVARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Valor" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaModificacion" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="Parametros"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="4" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.4" />
+        
+        <createTable tableName="LogVehiculos">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_vehiculos_id"/>
+            </column>
+            <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="LogVehiculos"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="5" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.5" />
+        
+        <createTable tableName="LogPersonas">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_personas_id"/>
+            </column>
+            <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="LogPersonas"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="6" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.6" />
+        
+        <createTable tableName="LogConsultaIdentificador">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_consulta_identificador_id"/>
+            </column>
+            <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="LogConsultaIdentificador"/>
+        </rollback>
+
+    </changeSet>
+
+    <changeSet id="7" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-1.7" />
+        
+        <createTable tableName="LogConsultaTransito">
+            <column name="Id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_log_consulta_transito_id"/>
+            </column>
+            <column name="Mensaje" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="LogConsultaTransito"/>
         </rollback>
 
     </changeSet>
