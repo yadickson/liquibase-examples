@@ -3,21 +3,58 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
-    http://www.liquibase.org/xml/ns/dbchangelog-ext
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+  http://www.liquibase.org/xml/ns/dbchangelog-ext
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <!-- Creacion de secuencias -->
-        
+    <!-- Creacion de tablas -->
+
     <changeSet id="1" author="yadickson.soto">
         <ext:tagDatabase tag="1.0.0-1.1" />
+        
+        <createTable tableName="Vehiculos">
+            <column name="ID" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_vehiculos_id"/>
+            </column>
+            <column name="Patente" type="NCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Marca" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Modelo" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Anio" type="NCHAR(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TipoVehiculo" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Contrato" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RazonSocial" type="NVARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaExpiracion" type="NCHAR(8)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MotivoRechazo" type="NVARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FechaRegistro" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Estado" type="NCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
 
-        <createSequence sequenceName="SEQ_PERSONA_ID"
-                        minValue="1" maxValue="999999999999999999999999999" incrementBy="1"
-                        startValue="1" cacheSize="20" ordered="false" cycle="false" />
         <rollback>
-            <dropSequence sequenceName="SEQ_PERSONA_ID" />
+            <dropTable tableName="Vehiculos"/>
         </rollback>
+
     </changeSet>
 
 </databaseChangeLog>

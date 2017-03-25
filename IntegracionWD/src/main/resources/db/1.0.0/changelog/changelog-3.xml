@@ -7,18 +7,15 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <!-- Creacion de claves primarias -->
+    <!-- Creacion de procedimientos -->
 
-    <!--changeSet id="1" author="yadickson.soto">
-        <ext:tagDatabase tag="1.0.0-3.1" />
+    <!--changeSet id="1" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-9.1" />
 
-        <addPrimaryKey
-            tableName="T_CUENTA"
-            columnNames="ID"
-            constraintName="PK_ID_T_CUENTA" />
+        <createProcedure encoding="utf8" procedureName="nombre" path="../scripts/archivo.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropPrimaryKey tableName="T_CUENTA" constraintName="PK_ID_T_CUENTA" />
+            <dropProcedure procedureName="nombre"/>
         </rollback>
     
     </changeSet-->
