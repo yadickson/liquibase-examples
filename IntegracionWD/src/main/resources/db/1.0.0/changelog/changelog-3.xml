@@ -9,15 +9,15 @@
 
     <!-- Creacion de procedimientos -->
 
-    <!--changeSet id="1" author="yadickson.soto" dbms="mssql">
-        <ext:tagDatabase tag="1.0.0-9.1" />
+    <changeSet id="1" author="yadickson.soto" dbms="mssql">
+        <ext:tagDatabase tag="1.0.0-3.1" />
 
-        <createProcedure encoding="utf8" procedureName="nombre" path="../scripts/archivo.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_VEHICULOS" path="../scripts/SP_INSERTAR_VEHICULOS.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="nombre"/>
+            <dropProcedure procedureName="SP_INSERTAR_VEHICULOS"/>
         </rollback>
     
-    </changeSet-->
+    </changeSet>
 
 </databaseChangeLog>
