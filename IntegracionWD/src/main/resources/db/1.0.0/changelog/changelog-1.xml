@@ -115,13 +115,13 @@
         <ext:tagDatabase tag="1.0.0-1.3" />
         
         <createTable tableName="Parametros">
-            <column name="Id" type="INT" >
-                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyParametrosId"/>
+            <column name="Codigo" type="INT" >
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyParametrosCodigo"/>
             </column>
-            <column name="Nombre" type="NVARCHAR(10)">
+            <column name="Nombre" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Valor" type="NVARCHAR(50)">
+            <column name="Valor" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaModificacion" type="DATE">
