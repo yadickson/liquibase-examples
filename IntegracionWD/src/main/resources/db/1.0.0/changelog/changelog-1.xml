@@ -16,7 +16,7 @@
             <column name="Id" type="BIGINT" autoIncrement="true" >
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyVehiculosId"/>
             </column>
-            <column name="Patente" type="NCHAR(10)">
+            <column name="Patente" type="VARCHAR(7)">
                 <constraints nullable="false"/>
             </column>
             <column name="Marca" type="NVARCHAR(50)">
@@ -25,7 +25,7 @@
             <column name="Modelo" type="NVARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Anio" type="NCHAR(4)">
+            <column name="Anio" type="VARCHAR(4)">
                 <constraints nullable="false"/>
             </column>
             <column name="TipoVehiculo" type="NVARCHAR(50)">
@@ -37,7 +37,7 @@
             <column name="RazonSocial" type="NVARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="FechaExpiracion" type="NCHAR(8)">
+            <column name="FechaExpiracion" type="VARCHAR(8)">
                 <constraints nullable="false"/>
             </column>
             <column name="MotivoRechazo" type="NVARCHAR(max)">
@@ -46,7 +46,7 @@
             <column name="FechaRegistro" type="DATE">
                 <constraints nullable="false"/>
             </column>
-            <column name="Estado" type="NCHAR(10)">
+            <column name="Estado" type="VARCHAR(1)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -64,16 +64,16 @@
             <column name="Id" type="BIGINT" autoIncrement="true" >
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PrimaryKeyPersonasId"/>
             </column>
-            <column name="Nombre" type="NVARCHAR(10)">
+            <column name="Nombre" type="NVARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
             <column name="Apellido" type="NVARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="RUT" type="NCHAR(10)">
+            <column name="RUT" type="VARCHAR(10)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Tarjeta" type="NVARCHAR(50)">
+            <column name="Tarjeta" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="TipoPase" type="NVARCHAR(50)">
@@ -85,13 +85,13 @@
             <column name="RazonSocial" type="NVARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="FechaExpiracionTrabajador" type="NCHAR(8)">
+            <column name="FechaExpiracionTrabajador" type="VARCHAR(8)">
                 <constraints nullable="false"/>
             </column>
             <column name="MotivoRechazoTrabajador" type="NVARCHAR(max)">
                 <constraints nullable="false"/>
             </column>
-            <column name="FechaExpiracionLicencia" type="NCHAR(8)">
+            <column name="FechaExpiracionLicencia" type="VARCHAR(8)">
                 <constraints nullable="false"/>
             </column>
             <column name="MotivoRechazoLicencia" type="NVARCHAR(max)">
@@ -100,7 +100,7 @@
             <column name="FechaRegistro" type="DATE">
                 <constraints nullable="false"/>
             </column>
-            <column name="Estado" type="NCHAR(10)">
+            <column name="Estado" type="VARCHAR(1)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -145,7 +145,7 @@
             <column name="Mensaje" type="NVARCHAR(max)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Codigo" type="NVARCHAR(20)">
+            <column name="Codigo" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
@@ -169,7 +169,7 @@
             <column name="Mensaje" type="NVARCHAR(max)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Codigo" type="NVARCHAR(20)">
+            <column name="Codigo" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
@@ -193,7 +193,7 @@
             <column name="Mensaje" type="NVARCHAR(max)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Codigo" type="NVARCHAR(20)">
+            <column name="Codigo" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
@@ -217,7 +217,7 @@
             <column name="Mensaje" type="NVARCHAR(max)">
                 <constraints nullable="false"/>
             </column>
-            <column name="Codigo" type="NVARCHAR(20)">
+            <column name="Codigo" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="FechaRegistro" type="DATE">
