@@ -3,7 +3,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_TRANSITO]
 	@FechaHasta [varchar](8),
 	@Identificador [varchar](10),
 	@Tipo [varchar](1),
-	@Listado CURSOR OUTPUT,
+	@Listado CURSOR VARYING OUTPUT,
 	@Resultado [varchar](10) OUTPUT,
 	@Mensaje [nvarchar](4000) OUTPUT
 AS
