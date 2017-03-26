@@ -7,26 +7,23 @@
     
     <!-- Carga de data inicial -->
 
-    <!--changeSet id="1" author="yadickson.soto">
-        <ext:tagDatabase tag="1.0.0-8.1" />
+    <changeSet id="1" author="yadickson.soto">
+        <ext:tagDatabase tag="1.0.0-4.1" />
         
         <loadData relativeToChangelogFile="true" encoding="UTF-8"
-                  file="../csv/T_CUENTA.csv"
+                  file="../csv/Parametros.csv"
                   separator=","
                   quotchar='"'
-                  tableName="T_CUENTA">
-            <column name="ID" type="NUMERIC" />
-            <column name="NOMBRE" type="NUMERIC" />
-            <column name="TITULO" type="STRING" />
-            <column name="TIPO" type="NUMERIC" />
-            <column name="ORDEN" type="NUMERIC" />
-            <column name="VISUALIZACION" type="NUMERIC" />
-            <column name="CATEGORIA" type="NUMERIC" />
-            <column name="VIGENCIA" type="NUMERIC" />
+                  tableName="Parametros">
+            <column name="Codigo" type="NUMERIC" />
+            <column name="Nombre" type="STRING" />
+            <column name="Valor" type="STRING" />
         </loadData>
+
         <rollback>
-            <delete tableName="T_CUENTA" />
+            <delete tableName="Parametros" />
         </rollback>
-    </changeSet-->
+
+    </changeSet>
 
 </databaseChangeLog>
