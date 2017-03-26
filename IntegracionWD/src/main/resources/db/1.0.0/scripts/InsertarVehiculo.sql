@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[SP_INSERTAR_VEHICULOS]
+CREATE PROCEDURE [dbo].[InsertarVehiculo]
      @Patente [varchar](7),
      @Marca [nvarchar](50),
      @Modelo [nvarchar](50),

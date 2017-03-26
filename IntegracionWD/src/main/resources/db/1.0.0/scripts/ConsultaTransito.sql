@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[SP_CONSULTA_TRANSITO]
+CREATE PROCEDURE [dbo].[ConsultaTransito]
 	@FechaDesde [varchar](8),
 	@FechaHasta [varchar](8),
 	@Identificador [varchar](10),

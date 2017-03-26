@@ -12,10 +12,10 @@
     <changeSet id="1" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.1" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_VEHICULOS" path="../scripts/SP_INSERTAR_VEHICULOS.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="InsertarVehiculo" path="../scripts/InsertarVehiculo.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_VEHICULOS"/>
+            <dropProcedure procedureName="InsertarVehiculo"/>
         </rollback>
     
     </changeSet>
@@ -23,10 +23,10 @@
     <changeSet id="2" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.2" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_PERSONAS" path="../scripts/SP_INSERTAR_PERSONAS.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="InsertarPersona" path="../scripts/InsertarPersona.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_PERSONAS"/>
+            <dropProcedure procedureName="InsertarPersona"/>
         </rollback>
     
     </changeSet>
@@ -34,10 +34,10 @@
     <changeSet id="3" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.3" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_VEHICULOS" path="../scripts/SP_INSERTAR_LOG_VEHICULOS.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="LogVehiculo" path="../scripts/LogVehiculo.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_LOG_VEHICULOS"/>
+            <dropProcedure procedureName="LogVehiculo"/>
         </rollback>
     
     </changeSet>
@@ -45,10 +45,10 @@
     <changeSet id="4" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.4" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_PERSONAS" path="../scripts/SP_INSERTAR_LOG_PERSONAS.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="LogPersona" path="../scripts/LogPersona.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_LOG_PERSONAS"/>
+            <dropProcedure procedureName="LogPersona"/>
         </rollback>
     
     </changeSet>
@@ -56,10 +56,10 @@
     <changeSet id="5" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.5" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_CONSULTA_TRANSITO" path="../scripts/SP_INSERTAR_LOG_CONSULTA_TRANSITO.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="LogTransito" path="../scripts/LogTransito.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_LOG_CONSULTA_TRANSITO"/>
+            <dropProcedure procedureName="LogTransito"/>
         </rollback>
     
     </changeSet>
@@ -67,10 +67,10 @@
     <changeSet id="6" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.6" />
 
-        <createProcedure encoding="utf8" procedureName="SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR" path="../scripts/SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="LogIdentificador" path="../scripts/LogIdentificador.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_INSERTAR_LOG_CONSULTA_IDENTIFICADOR"/>
+            <dropProcedure procedureName="LogIdentificador"/>
         </rollback>
     
     </changeSet>
@@ -78,10 +78,10 @@
     <changeSet id="7" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.7" />
 
-        <createProcedure encoding="utf8" procedureName="SP_CONSULTA_IDENTIFICADOR" path="../scripts/SP_CONSULTA_IDENTIFICADOR.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="ConsultaIdentificador" path="../scripts/ConsultaIdentificador.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_CONSULTA_IDENTIFICADOR"/>
+            <dropProcedure procedureName="ConsultaIdentificador"/>
         </rollback>
     
     </changeSet>
@@ -89,10 +89,10 @@
     <changeSet id="8" author="yadickson.soto" dbms="mssql">
         <ext:tagDatabase tag="1.0.0-3.8" />
 
-        <createProcedure encoding="utf8" procedureName="SP_CONSULTA_TRANSITO" path="../scripts/SP_CONSULTA_TRANSITO.sql" relativeToChangelogFile="true" />
+        <createProcedure encoding="utf8" procedureName="ConsultaTransito" path="../scripts/ConsultaTransito.sql" relativeToChangelogFile="true" />
 
         <rollback>
-            <dropProcedure procedureName="SP_CONSULTA_TRANSITO"/>
+            <dropProcedure procedureName="ConsultaTransito"/>
         </rollback>
     
     </changeSet>

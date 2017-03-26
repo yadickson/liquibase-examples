@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[SP_CONSULTA_IDENTIFICADOR]
+CREATE PROCEDURE [dbo].[ConsultaIdentificador]
 	@Identificador [varchar](10),
 	@Tipo [varchar](1),
 	@Id [varchar](20) OUTPUT,
