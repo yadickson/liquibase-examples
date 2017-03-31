@@ -8,12 +8,12 @@ AS
 BEGIN TRY
 	SET @Id = '0';	
 
-	CREATE TABLE #temp
+	CREATE TABLE #tempIdentificador
 	(
 		Id [varchar](20)
  	); 
 	
-	INSERT INTO #temp	  	
+	INSERT INTO #tempIdentificador	  	
 	EXECUTE DIEBOLD.DBO.SP_GET_IDENTIFICADOR @Identificador, @Tipo;
 	  	
 	SET @Id = (SELECT * FROM #tempIdentificador)
