@@ -8,13 +8,22 @@ AS
 BEGIN TRY
 	SET @Id = '0';	
 
-  	/*
-  	 EXEC SP_GET_IDENTIFICADOR @Identificador, @Tipo, @Id OUTPUT;
-  	*/
+	CREATE TABLE #temp
+	(
+		Id [varchar](20)
+ 	); 
+	
+	INSERT INTO #temp	  	
+	EXECUTE DIEBOLD.DBO.SP_GET_IDENTIFICADOR @Identificador, @Tipo;
+	  	
+	SET @Id = (SELECT * FROM #tempIdentificador)
 
 	IF @@trancount > 0 COMMIT TRANSACTION;
 	SET @Resultado = 'EXITOSO';
 	SET @Mensaje = 'OK';
+
+	IF OBJECT_ID(N'tempdb..#tempIdentificador', N'U') IS NOT NULL   
+		DROP TABLE #tempIdentificador
 	  
 END TRY
 BEGIN CATCH
@@ -23,5 +32,8 @@ BEGIN CATCH
 	SET @Resultado = 'FALLIDO';
 	SET @Mensaje = ERROR_PROCEDURE() + ' '+ ERROR_MESSAGE(); 
 	
+	IF OBJECT_ID(N'tempdb..#tempIdentificador', N'U') IS NOT NULL   
+		DROP TABLE #tempIdentificador
+
 END CATCH
 
