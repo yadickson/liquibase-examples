@@ -93,3 +93,18 @@ mvn install:install-file -Dfile=sqljdbc41.jar -DgroupId=com.microsoft.sqlserver 
 ```
 mvn install:install-file -Dfile=sqljdbc42.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc_6.0 -Dversion=4.2 -Dpackaging=jar
 ```
+
+**Ejecutar**
+
+```
+Actualizar
+ mvn liquibase:update
+ mvn liquibase:updateSQL
+```
+
+```
+Limpiar
+mvn liquibase:rollback -Dliquibase.rollbackCount=400
+mvn liquibase:rollbackSQL -Dliquibase.rollbackCount=400
+```
+
