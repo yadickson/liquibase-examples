@@ -1,8 +1,8 @@
 CREATE PROCEDURE [dbo].[ConsultaTransito]
 	@FechaDesde [varchar](8),
 	@FechaHasta [varchar](8),
-	@Identificador [varchar](20),
-	@Tipo [varchar](1),
+	@Identificador [varchar](20) = NULL,
+	@Tipo [varchar](1) = NULL,
 	@Resultado [varchar](10) OUTPUT,
 	@Mensaje [nvarchar](4000) OUTPUT
 AS
